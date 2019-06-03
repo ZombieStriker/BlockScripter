@@ -1,0 +1,78 @@
+1.0.12
+	Updated to 1.14
+
+1.0.11
+	Added "sendCommandAsPlayer"
+	Added "sendCommandAsConsole"
+
+1.0.10
+	Fixed names so names without chatcolors are unitalicized to match the other names.
+
+1.0.9
+	Added "onBlockPlaceHere" to detect when a player placed a block at that location.
+	Added support to target blocks that are no longer existing. If the block changes its type, or if it listens for when a block is placed there, it will not be removed on reloads.
+
+	//in future updates
+	-- Do animations
+	-- onRapidLeftClick
+	-- Add support for other plugins
+1.0.8
+	Added ability to target the closest player.
+	Added ability to target the furthest player.
+	Cleande up code. Moved ScriptedBlock and ScriptedLine to the same package as ScriptManager
+	
+1.0.7
+	Added "setHunger" to set a player's hunger
+	Made GUI prompt customizable
+	Removed bounce as it did not work properly 	
+
+1.0.6
+	Fixed the offset param icon in the gui
+	Added method for making sure that a material type is used for an action/effect.
+	Fixed "spawnEntity" errors.
+	Fixed problem where blockoffsets/entity types were not being saved correctly.	
+
+1.0.5
+	Added "spawnColoredParticle" to spawn particles of any color.
+	Fixed shootArrow CCE error.
+
+1.0.4
+	Added "shootArrow" to shoot an arrow in some direction.
+
+1.0.3
+	Added "openPrompt" to make a player accept or reject something
+	Added "onPromtAccept" for when players accept a prompt
+	Added "onPromptReject" for when players reject a prompt
+	Added support for the removal of scripted actions/events without really breaking existing blocks
+	Fixed ways perms are stored and checked
+	Reworked internals: The scriptedblock instance is stored instead of just the block.
+	Reworked internals: "ScriptedEffects" are now "ScriptedActions" to reflect their in-game name
+	Removed broadcastHelloWorld, as it was only supposed to be a test action
+
+1.0.2
+	Added "spawnItem"
+	Added "spawnEntity"
+	Added support for selecting entity types 
+	Added support for selecting offsets. Could be useful for targets.
+	
+1.0.1
+	Added full pre-1.13 support
+	Added support for blocks being moved by pistons
+	Added fix to remove no longer existing blocks.
+	Added "onProjectileHit" trigger
+	Added "onBlockBreak" trigger
+	Added "onRedstonePowered" trigger
+	Added "onRedstoneDepowered" trigger
+	Added Projectile target
+	Added "Bounce" for Projectile effect
+	Added "addHealth" for player effects
+	Added "setHealth" for player effects
+	Added "sendTitle" for player effects
+	Added "setFireTicks" for player effects
+	Added "Boolean" as parameter type
+	Fixed GUIs that needs multiple pages
+	Fixed menu for targeted blocks that are air
+	Fixed setVelocity to accept ints for Z	
+
+1.0.0
+	init post

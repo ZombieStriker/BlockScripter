@@ -1,0 +1,21 @@
+main: me.zombie_striker.blockscripter.BlockScripter
+version:  ${project.version}
+name: BlockScripter
+api-version: 1.13
+commands:
+   BlockScripter:
+      description: Controls all commands for BlockScripter
+author:
+   Zombie_Striker
+permissions:
+   blockscriper.*:
+     description: Gives access to all Inferno commands
+     children:
+       blockscripter.givewrench: true
+       blockscripter.usewrench: true
+   blockscripter.givewrench:
+     description: Allows you to get the wrench through a command
+     default: op
+   blockscripter.usewrench:
+     description: Allows you to use the wrench
+     default: op
