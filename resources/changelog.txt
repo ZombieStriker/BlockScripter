@@ -1,3 +1,6 @@
+1.0.13
+    Fixed Inventory size for 1.14.
+
 1.0.12
 	Updated to 1.14
 

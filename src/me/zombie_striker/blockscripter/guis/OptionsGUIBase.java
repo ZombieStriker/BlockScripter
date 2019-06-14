@@ -36,7 +36,7 @@ public class OptionsGUIBase {
 
 	public static HashMap<UUID, List<Inventory>> allGuis = new HashMap<>();
 
-	public static int maxInvSize = 13 * 9;
+	public static int maxInvSize = 6 * 9;
 
 	public static Inventory createGUI(UUID viewer, String inventoryName, GUISelectorType type, boolean hasNoneOption,
 			Object... options) {

@@ -3,6 +3,8 @@ package me.zombie_striker.blockscripter.guis;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.zombie_striker.blockscripter.BlockScripter;
+import me.zombie_striker.blockscripter.easygui.EasyGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
@@ -218,6 +220,8 @@ public class BlockScriptWindow {
 	}
 
 	private static int getInvSize() {
+		if(BlockScripter.isVersionHigherThan(1,14))
+			return 9*6;
 		return 72;
 	}
 }
