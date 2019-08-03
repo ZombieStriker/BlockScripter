@@ -51,6 +51,9 @@ public class ActionSetHunger extends ScriptAction {
 
 	@Override
 	public Material getOverrideMaterial() {
-		return Material.COOKED_BEEF;
+
+		try {
+			return Material.COOKED_BEEF;
+		}catch (Error|Exception e3){return Material.STONE;}
 	}
 }

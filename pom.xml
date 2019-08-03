@@ -6,7 +6,7 @@
 
     <groupId>me.zombie_striker</groupId>
     <artifactId>BlockScripter</artifactId>
-    <version>1.0.13</version>
+    <version>1.0.14</version>
 
 
     <repositories>
@@ -42,7 +42,16 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>plugin.yml</include>
+                    <include>changelog.txt</include>
                     <include>config.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src</directory>
+                <targetPath>src</targetPath>
+                <includes>
+                    <include>**/*.java</include>
+                    <include>**/*.gwt.xml</include>
                 </includes>
             </resource>
         </resources>

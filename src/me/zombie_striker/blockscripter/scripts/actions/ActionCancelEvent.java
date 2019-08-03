@@ -43,6 +43,9 @@ public class ActionCancelEvent extends ScriptAction {
 	}
 	@Override
 	public Material getOverrideMaterial() {
-		return Material.BARRIER;
+
+		try {
+			return Material.BARRIER;
+		}catch (Error|Exception e3){return Material.STONE;}
 	}
 }

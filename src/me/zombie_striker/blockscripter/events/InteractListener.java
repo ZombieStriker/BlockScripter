@@ -115,8 +115,10 @@ public class InteractListener implements Listener {
 
 	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
 	public void onInteract(PlayerInteractEvent e) {
-		if (e.getHand() == EquipmentSlot.OFF_HAND)
-			return;
+		try {
+			if (e.getHand() == EquipmentSlot.OFF_HAND)
+				return;
+		}catch (Error|Exception e4){}
 		for (ScriptedBlock sc : ScriptManager.blocks) {
 			if (sc.getBlock().equals(e.getClickedBlock())) {
 				ScriptableTargetHolder sth = new ScriptableTargetHolder();

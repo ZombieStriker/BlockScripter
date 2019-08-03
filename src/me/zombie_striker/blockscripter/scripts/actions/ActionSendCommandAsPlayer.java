@@ -45,6 +45,9 @@ public class ActionSendCommandAsPlayer extends ScriptAction {
 	}
 	@Override
 	public Material getOverrideMaterial() {
-		return Material.COMMAND_BLOCK;
+
+		try {
+			return Material.COMMAND_BLOCK;
+		}catch (Error|Exception e3){return Material.STONE;}
 	}
 }
