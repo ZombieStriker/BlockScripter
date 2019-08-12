@@ -1,3 +1,6 @@
+1.0.15
+    Fixed menu name length
+
 1.0.14
     Fixed support for 1.8
 

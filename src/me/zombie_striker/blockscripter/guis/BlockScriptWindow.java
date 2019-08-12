@@ -30,7 +30,12 @@ public class BlockScriptWindow {
 		int invsize = getInvSize();
 		ScriptedBlock sb = ScriptManager.getBlock(b);
 		String name = sb.getName();
-		Inventory inv = Bukkit.createInventory(null, invsize, blockScripterTitleOvereviewPrefix + name);
+		Inventory inv =null;
+		try{
+			inv = Bukkit.createInventory(null, invsize, blockScripterTitleOvereviewPrefix + name);
+		}catch (Error|Exception e4){
+			inv = Bukkit.createInventory(null, invsize, (blockScripterTitleOvereviewPrefix + name).substring(0,Math.min(31 , (blockScripterTitleOvereviewPrefix + name).length())));
+		}
 
 		// TRIGGER,AFFECTED,EFFECT,PARAMETER_ONE,PARAMETER_THREE,PARAMETER_TWO,PARAMETER_FOUR,PARAMETER_FIVE;
 		inv.setItem(0, createItem(b.getType(), 1, "&6Change name?", "&fCurrently: " + name));
