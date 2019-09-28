@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ad81126-76b7-4523-8d82-2501dadb0939" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/scripts/actions/ActionSendCommandAsPlayerBypassPerm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/changelog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/guis/BlockScriptWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/guis/BlockScriptWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/BlockScripter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/BlockScripter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/events/InteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/zombie_striker/blockscripter/events/InteractListener.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +21,12 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>invsi</find>
-      <find>maxinv</find>
-    </findStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,11 +58,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\GitHub\BlockScripter\src\me\zombie_striker\blockscripter" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\GitHub\BlockScripter\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.zombie_striker.blockscripter.scripts.actions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GitHub\BlockScripter\src\me\zombie_striker\blockscripter" />
     </key>
   </component>
   <component name="RunDashboard">

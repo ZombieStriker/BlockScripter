@@ -101,7 +101,7 @@ public class InteractListener implements Listener {
 	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
 	public void onBlockBreak(BlockBreakEvent e) {
 		for (ScriptedBlock sc : ScriptManager.blocks) {
-			if (sc.getBlock().equals(e.getBlock())) {
+			if (sc.getBlock().getLocation().equals(e.getBlock().getLocation())) {
 				ScriptableTargetHolder sth = new ScriptableTargetHolder();
 				sth.setSelfBlock(sc);
 				sth.setLocation(e.getBlock().getLocation());

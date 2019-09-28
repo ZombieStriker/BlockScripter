@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.*;
+import org.bukkit.block.BlockState;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -36,6 +38,19 @@ public class BlockScripter extends JavaPlugin {
 		SERVER_VERSION = name;
 	}
 
+	private static BlockScripter main = null;
+
+	public static void bypassPermissionCommand(Player player, String command, String permission){
+		PermissionAttachment att = null;
+		if(!player.hasPermission(permission)){
+			att = player.addAttachment(main,0);
+			att.setPermission(permission,true);
+		}
+		Bukkit.dispatchCommand(player,command);
+		if(att!=null){
+			player.removeAttachment(att);
+		}
+	}
 	public static boolean isVersionHigherThan(int mainVersion, int secondVersion) {
 		if (secondVersion >= 9 && Bukkit.getPluginManager().isPluginEnabled("ViaRewind"))
 			return false;
@@ -57,7 +72,7 @@ public class BlockScripter extends JavaPlugin {
 	}
 
 	public void onEnable() {
-
+main = this;
 		// Creates the config.yml
 		saveConfig();
 		if (!getConfig().contains("Wrench.Material")) {
@@ -166,6 +181,7 @@ public class BlockScripter extends JavaPlugin {
 
 		ScriptManager.registerAction(new ActionSendCommandAsConsole("sendCommandAsConsole"));
 		ScriptManager.registerAction(new ActionSendCommandAsPlayer("sendCommandAsPlayer"));
+		ScriptManager.registerAction(new ActionSendCommandAsPlayerBypassPerm("sendCommandAsPlayerBypassPermission"));
 		BlockScriptConfigManager.init(this);
 		new BukkitRunnable() {
 
