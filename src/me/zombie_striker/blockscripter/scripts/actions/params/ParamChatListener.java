@@ -1,5 +1,6 @@
 package me.zombie_striker.blockscripter.scripts.actions.params;
 
+import me.zombie_striker.blockscripter.BlockScripter;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -9,13 +10,21 @@ import me.zombie_striker.blockscripter.guis.BlockScriptWindow;
 import me.zombie_striker.blockscripter.guis.GUIManager;
 import me.zombie_striker.blockscripter.scripts.ScriptLine;
 import me.zombie_striker.blockscripter.scripts.ScriptedBlock;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class ParamChatListener implements Listener {
 
+	private JavaPlugin main;
+
+	public ParamChatListener(JavaPlugin main){
+		this.main = main;
+	}
+
 	@EventHandler
-	public void onChat(AsyncPlayerChatEvent e) {
+	public void onChat(final AsyncPlayerChatEvent e) {
 		if (GUIManager.isCheckingChat(e.getPlayer())) {
-			ScriptedBlock sb = GUIManager.getScriptLookingAt(e.getPlayer());
+			final ScriptedBlock sb = GUIManager.getScriptLookingAt(e.getPlayer());
 			ScriptLine sl = GUIManager.getLineLookingAt(e.getPlayer());
 			int param = GUIManager.getOptionIDLookingAt(e.getPlayer());
 
@@ -36,7 +45,10 @@ public class ParamChatListener implements Listener {
 			}
 			GUIManager.removeListenerForChat(e.getPlayer());
 
-			BlockScriptWindow.loadWindow((Player) e.getPlayer(), sb.getBlock());
+			new BukkitRunnable() {
+				public void run(){
+			BlockScriptWindow.loadWindow((Player)e.getPlayer(),sb.getBlock());
+			}}.runTaskLater(main,0);
 			e.setCancelled(true);
 		}
 	}

@@ -124,7 +124,7 @@ main = this;
 
 		Bukkit.getPluginManager().registerEvents(new InteractListener(), this);
 
-		Bukkit.getPluginManager().registerEvents(new ParamChatListener(), this);
+		Bukkit.getPluginManager().registerEvents(new ParamChatListener(this), this);
 
 		Bukkit.getPluginManager().registerEvents(new PromptGUIListener(), this);
 

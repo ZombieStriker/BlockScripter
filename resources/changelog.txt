@@ -1,3 +1,7 @@
+1.0.18
+    Fixed EasyGUI bug for 1.16+
+    Fixed asynch chat bug
+
 1.0.17
     Fixed BlockBreaking for 1.8 (needs testing)
 
